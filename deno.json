@@ -1,0 +1,24 @@
+{
+  "tasks": {
+    "start": "deno run --allow-net --allow-read='./public' --unstable-kv ./main.tsx",
+    "dev": "deno run --watch='**/*.tsx?,./public' --allow-net='0.0.0.0' --allow-read='./public' --unstable-kv main.tsx"
+  },
+  "imports": {
+    "preact": "https://esm.sh/preact@10.19.3",
+    "preact/": "https://esm.sh/preact@10.19.3/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.3.1",
+    "$std/": "https://deno.land/std@0.214.0/",
+    "typed-htmx": "npm:typed-htmx"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "precompile",
+    "jsxImportSource": "preact"
+  },
+  "exclude": [
+    "public",
+    ".vscode",
+    ".git"
+  ],
+  "lock": false
+}

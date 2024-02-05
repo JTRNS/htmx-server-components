@@ -1,0 +1,63 @@
+body {
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0 1rem;
+}
+
+header,
+main {
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+#todolist {
+  margin: 1rem -2px;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: 1fr 2rem 2rem;
+  grid-auto-rows: 2rem;
+  margin: 4px 0;
+  gap: 4px;
+  user-select: none;
+}
+
+.todo-item label {
+  font-size: 1.1rem;
+  white-space: nowrap;
+  text-shadow: 0px 1px 2px rgb(0 0 0 / 35%);
+
+
+  &:has(input:checked) {
+    text-decoration: line-through;
+    opacity: .7;
+  }
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+  transform: translateY(-1px);
+  width: 1.275rem;
+  height: 1.275rem;
+}
+
+input[type="text"] {
+  padding: 1ch;
+}
+
+.todo-item button {
+  border: none;
+  background: rgb(242, 242, 242);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.todo-item button:only-of-type {
+  background-color: #57cc99;
+  color: white;
+  grid-column-end: span 2;
+}
