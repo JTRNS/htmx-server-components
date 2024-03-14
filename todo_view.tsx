@@ -1,6 +1,6 @@
 import type { Todo } from "./todo_store.ts";
 
-export function TodoView({ todos }: { todos: Todo[] }) {
+export function TodoIndex({ todos }: { todos: Todo[] }) {
   return (
     <main>
       <Create />

@@ -50,7 +50,7 @@ async function handleTodoListRequest(req: Request) {
   switch (req.method) {
     case "GET": {
       const todos = await todoStore.getAll();
-      return TodoView("TodoView", { todos });
+      return TodoView("TodoIndex", { todos });
     }
     case "POST": {
       const formData = await req.formData();
