@@ -4,10 +4,11 @@
     "dev": "deno run --watch='**/*.tsx?,./public' --allow-net='0.0.0.0' --allow-read='./public' --unstable-kv main.tsx"
   },
   "imports": {
-    "preact": "https://esm.sh/preact@10.19.3",
-    "preact/": "https://esm.sh/preact@10.19.3/",
-    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.3.1",
     "$std/": "https://deno.land/std@0.214.0/",
+    "@simple/urlpattern-router": "jsr:@simple/urlpattern-router@^0.0.2",
+    "preact": "https://esm.sh/preact@10.19.3",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.3.1",
+    "preact/": "https://esm.sh/preact@10.19.3/",
     "typed-htmx": "npm:typed-htmx"
   },
   "compilerOptions": {

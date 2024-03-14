@@ -1,6 +1,6 @@
 import type { Todo } from "./todo_store.ts";
 
-function TodoView({ todos }: { todos: Todo[] }) {
+export function TodoView({ todos }: { todos: Todo[] }) {
   return (
     <main>
       <Create />
@@ -9,7 +9,7 @@ function TodoView({ todos }: { todos: Todo[] }) {
   );
 }
 
-function List({ todos }: { todos: Todo[] }) {
+export function List({ todos }: { todos: Todo[] }) {
   return (
     <ul
       id="todolist"
@@ -25,7 +25,7 @@ function List({ todos }: { todos: Todo[] }) {
   );
 }
 
-function Create() {
+export function Create() {
   return (
     <form
       className="todo-item"
@@ -40,7 +40,15 @@ function Create() {
   );
 }
 
-function ListItem({ todo }: { todo: Todo }) {
+export function NewListItem({ todo }: { todo: Todo }) {
+  return (
+    <li>
+      <ListItem todo={todo} />
+    </li>
+  );
+}
+
+export function ListItem({ todo }: { todo: Todo }) {
   return (
     <div className="todo-item" hx-target="this" hx-swap="outerHTML">
       <label>
@@ -62,7 +70,7 @@ function ListItem({ todo }: { todo: Todo }) {
   );
 }
 
-function EditableItem({ todo }: { todo: Todo }) {
+export function EditableItem({ todo }: { todo: Todo }) {
   return (
     <form
       className="todo-item"
@@ -86,10 +94,3 @@ function EditableItem({ todo }: { todo: Todo }) {
     </form>
   );
 }
-
-TodoView.List = List;
-TodoView.ListItem = ListItem;
-TodoView.EditableItem = EditableItem;
-TodoView.Create = Create;
-
-export default TodoView;
